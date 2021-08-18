@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+    
+        .aa{
+            top: 0px;
+            /* background-color: salmon; */
+            width: 100%;
+            
+        }
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: -webkit-box;
+            /* display: -ms-flexbox; */
+            display: flex;
+            padding: 50px 0 5px 0;
+            width: 100%;
+            z-index: 150;
+            
+        }
+        .sticky-nav.scroll {
+            padding-top: 15px !important;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .heading{
+            margin-right: 130px;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+    
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 100%;
+            margin: auto;
+            height: 770px;
+        }
+        .navv:hover{
+            color: yellowgreen;
+        }
+        /* .aa{
+            position: sticky;
+            top: 0;
+        } */
+        .aa li{
+            display: inline;
+            padding: 20px;
+            
+        }
+        .aa a{
+            color: white;   
+            text-decoration: none;
+        }
+        .aa a:hover{
+            color: yellowgreen;
+        }
+        .btn1{
+            background-color: #ffe26d; 
+        }
+        .btn1:hover{
+            background-color: #62497c;
+            color: white;
+        }
+        /* #cd{
+            font-size: 'Roboto', sans-serif;
+        } */
+        .ce>div{
+            margin: 10px;   
+            /* background-color: tomato; */
+            width: 21%;
+            height: 300px;
+            align-items: center;
+        }
+        .xx{
+            /* background-color: sandybrown; */
+            margin: 0px auto;
+            padding: 0px;
+            border: 0px;
+            background-color: #efefef;
+            
+        }
+        .xx:hover{
+            background-color: #ffe26d;
+        }
+        /* .ea img:hover{
+            background-color: #ffe26d;
+        } */
+        .ea img{
+            width: 100%;
+            
+        }
+        .btn2{
+            background-color: white;
+        }
+        .btn2:hover{
+            background-color: #62497c;
+            color: white;
+        }
+        .ga div{
+            /* background-color: aqua; */
+            width: 15%;
+            height: 400px;
+            margin: 10px;
+        }
+        .ja div{
+            width: 15%;
+            height: 400px;
+            margin: 10px;
+            /* background-color: hotpink; */
+        }
+        .grid1{
+            
+            display: grid;
+            width: 50%;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 'o tw th'
+                                 'fo fi si';
+            grid-gap: 35px;
+            /* background-color: blueviolet; */
+            padding: 20px;
+            height: 570px;
+            
+        }
+        .un{
+            grid-area: o;
+        }
+        .deux{
+            grid-area: tw;
+        }
+        .troix{
+            grid-area: th;
+        }
+        .quatre{
+            grid-area: fo;
+        }
+        .cinq{
+            grid-area: fi;
+        }
+        .sixx{
+            grid-area: si;
+        }
+        .grid1>div{
+            background-color:white;
+            height: 260px;
+        }
+        .grid1 img:hover{
+            color: greenyellow;
+        }
+        .yy{
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+        .img1{
+            
+            width: 170px; 
+            border-radius: 50%;
+            margin-left: 18px;
+            background-image: url(t1.jpg);
+            height: 170px;
+            background-color:#62497c;
+            
+            
+        }
+        
+    
+        .img2{
+            
+            width: 170px; 
+            border-radius: 50%;
+            margin-left: 18px;
+            background: url(t2.jpg);
+            z-index: 20;
+            /* background-color: greenyellow; */
+            height: 170px;
+            
+        }
+        .img3{
+            
+            width: 170px; 
+            border-radius: 50%;
+            margin-left: 18px;
+            background: url(t3.jpg);
+            z-index: 20;
+            /* background-color: greenyellow; */
+            height: 170px;
+            
+        }
+        .img4{
+            
+            width: 170px; 
+            border-radius: 50%;
+            margin-left: 18px;
+            background: url(t4.jpg);
+            z-index: 20;
+            /* background-color: greenyellow; */
+            height: 170px;
+            
+        }
+        .img5{
+            
+            width: 170px; 
+            border-radius: 50%;
+            margin-left: 18px;
+            background: url(t5.jpg);
+            z-index: 20;
+            /* background-color: greenyellow; */
+            height: 170px;
+            
+        }
+        .img6{
+            
+            width: 170px; 
+            border-radius: 50%;
+            margin-left: 18px;
+            background-image: url(t6.jpg);
+            z-index: 20;
+            /* background-color: greenyellow; */
+            height: 170px;
+            
+        }
+        .inside{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left:0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: all .5s ease;
+        }
+        .inside:hover{
+            opacity: 1;
+
+        }
+        i{
+            margin: 6px;
+        }
+        .ia{
+            background-image: url(newsletter.jpg);
+            background-size: 100%;
+            margin-top: 30px;
+            height: 400px;
+            width: 100%;
+        }
+        .btn3{
+            background-color: #ffe26d;
+        }
+        .btn3:hover{
+            background-color:#62497c ;
+            color: white;
+        }
+        .btn4:focus{
+            outline: none;
+            color: grey;
+        }
+        .btn5{
+            background-color: #ececec;
+        }
+        .btn5:hover{
+            background-color: #ffe26d;
+        }
+        .kd input{
+            width: 350px;
+            height: 40px;
+            border: 0px;
+            outline: none;
+            margin-bottom: 13px;
+        }
+        .kd input::placeholder{
+            font-size: 13px;
+            padding: 5px;
+            font-weight: lighter;
+        }
+        .kd textarea{
+            border: 0px;
+            outline: none;
+            margin-bottom: 10px;
+        }
+        .kd textarea::placeholder{
+            font-size: 13px;
+            padding: 5px;
+            font-weight: lighter;
+            
+        }
+        #send{
+            background-color: #62497c; 
+            padding: 15px;
+            height: 50px;
+        }
+        
+        #send:hover{
+            background-color: black;
+        }
+
+        .la div{
+            margin: 30px;
+            background-color: white;
+            height: 220px;
+            width: 50%;
+        }
+        .list1 li{
+            display: inline;
+            /* padding: 7px; */
+        }
+        .list1{
+            margin-top: 40px;
+        }
+        .hc>div{
+            margin: 10px;
+            width: 33%;
+            /* background-color: yellow; */
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="one" style="position: relative;"> 
+            <!-- <nav class="noSwipe"> -->
+                <nav class="container-fluid aa noSwipe sticky-nav" style="transition: all 0.5s ease 0s; z-index: 102; display: flex; justify-content: center;">
+                    <div class="navv">
+                        <ul>
+                            <li class="heading"><a href="#">ZIPPY</a></li>
+                            <li class="active"><a href="#">HOME</a></li>
+                            <li><a href="#project">PROJECTS</a></li>
+                            <li><a href="#pricing">PRICING</a></li>
+                            <li><a href="#team">TEAM</a></li>
+                            <li><a href="#blog">BLOG</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                    </div>
+                    
+                </nav>
+            </nav>
+            <script>
+                {
+                    let stickyNav = document.querySelector('.sticky-nav');
+                    let menuOpenTablet = document.querySelector('.open-off-canvas-tablet');
+
+                    if (window.scrollY > 50) {
+                        stickyNav.classList.add('scroll');
+                        menuOpenTablet.classList.add('scroll');
+
+                    }
+                    
+                    function onScroll() {
+                        window.addEventListener('scroll', callbackFunc);
+
+                        function callbackFunc() {
+                            let y = window.pageYOffset;
+
+                            if (y > 90) {
+                                stickyNav.classList.add('scroll');
+                                stickyNav.style.transition = '0.5s';
+                                menuOpenTablet.classList.add('scroll');
+                            } else {
+                                stickyNav.classList.remove('scroll');
+                                stickyNav.classList.remove('offset');
+                                menuOpenTablet.classList.remove('scroll');
+                            }
+                        }
+                    }
+
+                    window.onload = function() {
+                        onScroll();
+
+
+                        // PRELOADER
+                        document.body.classList.add('loaded');
+                    }
+                }
+            </script>
+            
+            <div class="car" style="z-index: 1;">
+                <div class="slide">
+                    <div id="myCarousel" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li class="item1 active"></li>
+                            <li class="item2"></li>
+                            <li class="item3"></li>
+                            <li class="item4"></li>
+                        </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <img src="slide1.jpg" alt="s1" width="100%" height="345">
+                        </div>
+                  
+                        <div class="item">
+                          <img src="slide2.jpg" alt="s2" width="100%" height="345">
+                        </div>
+                      
+                        <div class="item">
+                          <img src="slide3.jpg" alt="s3" width="100%" height="345">
+                        </div>
+                  
+                        <div class="item">
+                          <img src="slide4.jpg" alt="s4" width="100%" height="345">
+                        </div>
+                      </div>
+                  
+                    
+                    </div>
+                  </div>
+                  
+                  <script>
+                  $(document).ready(function(){
+                    // Activate Carousel
+                    $("#myCarousel").carousel({interval: 2000});
+                      
+                    // Enable Carousel Indicators
+                    $(".item1").click(function(){
+                      $("#myCarousel").carousel(0);
+                    });
+                    $(".item2").click(function(){
+                      $("#myCarousel").carousel(1);
+                    });
+                    $(".item3").click(function(){
+                      $("#myCarousel").carousel(2);
+                    });
+                    $(".item4").click(function(){
+                      $("#myCarousel").carousel(3);
+                    });
+                      
+                    // Enable Carousel Controls
+                    $(".left").click(function(){
+                      $("#myCarousel").carousel("prev");
+                    });
+                    $(".right").click(function(){
+                      $("#myCarousel").carousel("next");
+                    });
+                  });
+            
+                  </script>
+            </div>
+
+            <div class="container-fluid" style="z-index: 2; position: absolute; top: 250px; left: 350px; width: 34%;">
+                <p style="font-weight:bold; color: white; font-size: 40px;">One page promising to fill all your needs!</p>
+                <p style="color: ghostwhite; margin-top: 50px; font-size: 18px; font-weight: lighter;"> This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. </p>
+                <form action="">
+                    <label for="Learn More">
+                        <input type="submit" value="LEARN MORE" class="btn1" style="padding: 18px; font-size: 12px; font-weight: bold; margin-top: 15px; border: 0px; border-radius: 5px; width: 150px;">
+                    </label>
+                </form>
+            </div>
+            
+        </div>
+        <div class="two">
+            <p style="margin-top: 80px; font-weight: bold; display: flex; justify-content: center; font-size: 50px; color: black;">Welcome to Zippy</p>
+            <div class="container" style="width: 100%; display: flex; justify-content: center;">
+                <div class="cb" style="height: 300px; width: 40%;">
+                    <p id="#cd" style="font-size: 30px; margin-left: 110px; margin-right: 90px; margin-top: 50px;">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sol licitudin, lorem quis bibendum auctor.</p>
+                </div>
+                <div class="cc" style="height: 300px; width: 20%;">
+                    <img src="umbrella.svg" alt="" style="margin-top: 50px;">
+                </div>
+            </div>
+            <div class="container-fluid ce" style="display:flex;  width: 75%; justify-content: center; margin-top: 20px;" >
+                <div class="cf" style="margin-left: 40px;">
+                    <div class="icon1" style="border-radius: 50%; background-color:#62497c; height: 65px; width: 30%; margin-left: 80px;">
+                        <img style="margin: 12px;" src="icon1.svg" alt="">
+                    </div>
+                    <div class="da">
+                        <p style="color: #62497c; margin-left: 65px; margin-top: 20px; font-weight: bold;">LOREM IPSUM</p>
+                        <p style="margin: 25px; text-align: center; color: gray;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+                        <input type="submit" value="LEARN MORE" class="btn1" style="padding: 18px; font-size: 12px; font-weight: bold; margin-top: 15px; margin-left: 40px; border: 0px; border-radius: 5px; width: 150px;">
+                    </div>
+                </div>
+                <div class="cg">
+                    <div class="icon2" style="border-radius: 50%; background-color:#62497c; height: 65px; width: 30%; margin-left: 80px;">
+                        <img style="margin: 17px;" src="icon2.svg" alt="">
+                    </div>
+                    <div class="da">
+                        <p style="color: #62497c; margin-left: 65px; margin-top: 20px; font-weight: bold;">LOREM IPSUM</p>
+                        <p style="margin: 25px; text-align: center; color: gray;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+                        <input type="submit" value="LEARN MORE" class="btn1" style="padding: 18px; font-size: 12px; font-weight: bold; margin-top: 15px; margin-left: 40px; border: 0px; border-radius: 5px; width: 150px;">
+                    </div>
+                </div>
+                <div class="ch">
+                    <div class="icon3" style="border-radius: 50%; background-color:#62497c; height: 65px; width: 30%; margin-left: 80px;">
+                        <img style="margin: 18px;" src="icon3.svg" alt="">
+                    </div>
+                    <div class="da">
+                        <p style="color: #62497c; margin-left: 65px; margin-top: 20px; font-weight: bold;">LOREM IPSUM</p>
+                        <p style="margin: 25px; text-align: center; color: gray;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.</p>
+                        <input type="submit" value="LEARN MORE" class="btn1" style="padding: 18px; font-size: 12px; font-weight: bold; margin-top: 15px; margin-left: 40px; border: 0px; border-radius: 5px; width: 150px;">
+                    </div>
+                </div>
+            </div>
+            <hr color="black" width="50%" style="margin-top: 50px;">
+            <br>
+            
+            
+        </div>
+        <div class="three" id="project">
+            <p style="margin-top: 30px; font-weight: bold; display: flex; justify-content: center; font-size: 50px; color: black; margin-bottom: 50px;">Projects</p>
+            <div class="container-fluid ea" >
+                <div class="row">
+                    <div class="col-lg-3 xx">
+                        <img src="project1.jpg" alt="">
+                        <div style="padding: 60px;">
+                            <p style="font-weight: bold; font-size: 17px;">PROJECT NAME</p>
+                            <p style="color: grey;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At explicabo corrupti iure nostrum adipisci fugit laboriosam?</p>
+                            <input type="submit" value="LAUNCH CASE STUDY" class="btn2" style="padding: 18px; font-size: 12px; font-weight: bold; margin-top: 15px; border: 0px; border-radius: 5px; width: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 xx">
+                        <img src="project2.jpg" alt="">
+                        <div style="padding: 60px;">
+                            <p style="font-weight: bold; font-size: 17px;">PROJECT NAME</p>
+                            <p style="color: grey;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At explicabo corrupti iure nostrum adipisci fugit laboriosam?</p>
+                            <input type="submit" value="LAUNCH CASE STUDY" class="btn2" style="padding: 18px; font-size: 12px; font-weight: bold; margin-top: 15px; border: 0px; border-radius: 5px; width: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 xx">
+                        <img src="project3.jpg" alt="">
+                        <div style="padding: 60px;">
+                            <p style="font-weight: bold; font-size: 17px;">PROJECT NAME</p>
+                            <p style="color: grey;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At explicabo corrupti iure nostrum adipisci fugit laboriosam?</p>
+                            <input type="submit" value="LAUNCH CASE STUDY" class="btn2" style="padding: 18px; font-size: 12px; font-weight: bold; margin-top: 15px; border: 0px; border-radius: 5px; width: 200px;">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 xx">
+                        <img src="project4.jpg" alt="">
+                        <div style="padding: 60px;">
+                            <p style="font-weight: bold; font-size: 17px;">PROJECT NAME</p>
+                            <p style="color: grey;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At explicabo corrupti iure nostrum adipisci fugit laboriosam?</p>
+                            <input type="submit" value="LAUNCH CASE STUDY" class="btn2" style="padding: 18px; font-size: 12px; font-weight: bold; margin-top: 15px; border: 0px; border-radius: 5px; width: 200px;">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="four" id="pricing">
+            <p style="margin-top: 60px; font-weight: bold; display: flex; justify-content: center; font-size: 40px; color: black; margin-bottom: 40px;">Pricing Table</p>
+            <div class="ga" style="display: flex; justify-content: center;">
+                <div class="gb">
+                    <p style="font-weight: bold; text-align: center; font-size: 17px;">STANDARD PLAN</p>
+                    <p style="text-align: center; font-size: 14px; color: gray;">Free</p>
+                    <p style="text-align: center; padding: 20px; font-size: 13px;" > 
+                        2 GB Available <br><br>
+                        15 max. contacts <br><br>
+                        30 Messages/month <br><br>
+                        Disgusting Ad</p>
+                    <input type="submit" value="BUY" class="btn1" style="padding: 12px; font-size: 12px; font-weight: bold; margin-top: 15px; border: 0px; border-radius: 5px; width: 100px; margin-left: 60px;">
+                </div>
+                <div class="gc">
+                    <p style="font-weight: bold; text-align: center; font-size: 17px;">BUSINESS PLAN</p>
+                    <p style="text-align: center; font-size: 14px; color: gray;">14$/MONTH</p>
+                    <p style="text-align: center; padding: 20px; font-size: 13px;" > 
+                        10 GB Available <br><br>
+                        75 max. contacts <br><br>
+                        120 Messages/month <br><br>
+                        Ads Free</p>
+                    <input type="submit" value="BUY" class="btn1" style="padding: 12px; font-size: 12px; font-weight: bold; margin-top: 15px; border: 0px; border-radius: 5px; width: 100px; margin-left: 60px;">
+                </div>
+                <div class="gd">
+                    <p style="font-weight: bold; text-align: center; font-size: 17px;">PREMIUM PLAN</p>
+                    <p style="text-align: center; font-size: 14px; color: gray;">19$/MONTH</p>
+                    <p style="text-align: center; padding: 20px; font-size: 13px;" > 
+                        100 GB Available <br><br>
+                        Unlimited contacts <br><br>
+                        Unlimited Messages/month <br><br>
+                        Ads Fre</p>
+                    <input type="submit" value="BUY" class="btn1" style="padding: 12px; font-size: 12px; font-weight: bold; margin-top: 15px; border: 0px; border-radius: 5px; width: 100px; margin-left: 60px;">
+                </div>
+            </div>
+        </div>
+        <div class="five">
+            <div class="ha" style="background-color: #62497c; height: 550px;">
+                <div class="hb">
+                    <p style="font-weight: bold; font-size: 50px; color: white; display: flex; justify-content: center; padding: 40px;">Video Projects</p>
+                    <div class="hc" style="display: flex; ">
+                        <div class="hd">
+                            <iframe width="100%" height="300px" src="https://www.youtube.com/embed/f7zk9qLbSSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="he">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/ehZ9C30B4eI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="hf">
+                            <iframe width="100%" height="300" src="https://www.youtube.com/embed/nqye02H_H6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="six" id="team">
+            <p style="margin-top: 60px; font-weight: bold; display: flex; justify-content: center; font-size: 50px; color: black; margin-bottom: 40px;">Zippy Team</p>
+            <div class="gr" style="display: flex; justify-content: center;">
+                <div class="grid1">
+                    <div class="un">
+                        <!-- <img src="t1.jpg" alt="" style="border-radius: 50%; width: 180px; margin-left: 25px;"> -->
+                        <div class="img1 yy">
+                            <div class="inside">
+                                <a href="">
+                                    <i class="fab fa-3x fa-facebook" style="color: white"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-twitter" style="color:white;"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-instagram" style="color: white;"></i>
+                                </a>  
+                            </div>
+                        </div>
+                        <p style="text-align: center; padding: 20px 20px 0 20px; font-weight: bold; font-size: 16px;">SARA JOHNSON</p>
+                        <p style="text-align: center; font-size: 15px; color: gray; font-weight: bold;">Creative Head</p>
+                    </div>
+                    <div class="deux">
+                        <!-- <img src="t2.jpg" alt="" style="border-radius: 50%; width: 180px; margin-left: 25px;"> -->
+                        <div class="img2 yy">
+                            <div class="inside">
+                                <a href="">
+                                    <i class="fab fa-3x fa-facebook" style="color: white"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-twitter" style="color:white;"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-instagram" style="color: white;"></i>
+                                </a>  
+                            </div>
+                        </div>
+                        <p style="text-align: center; padding: 20px 20px 0 20px; font-weight: bold; font-size: 16px;">MATT ALEX</p>
+                        <p style="text-align: center; font-size: 15px; color: gray; font-weight: bold;">Art Director</p>
+                    </div>
+                    <div class="troix">
+                        <!-- <img src="t3.jpg" alt="" style="border-radius: 50%; width: 180px; margin-left: 25px;"> -->
+                        <div class="img3 yy">
+                            <div class="inside">
+                                <a href="">
+                                    <i class="fab fa-3x fa-facebook" style="color: white"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-twitter" style="color:white;"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-instagram" style="color: white;"></i>
+                                </a>  
+                            </div>
+                        </div>
+                        <p style="text-align: center; padding: 20px 20px 0 20px; font-weight: bold; font-size: 16px;">CHRIS PHILIPS</p>
+                        <p style="text-align: center; font-size: 15px; color: gray; font-weight: bold;">Senior Designer</p>
+                    </div>
+                    <div class="quatre">
+                        <!-- <img src="t4.jpg" alt="" style="border-radius: 50%; width: 180px; margin-left: 25px;"> -->
+                        <div class="img4 yy">
+                            <div class="inside">
+                                <a href="">
+                                    <i class="fab fa-3x fa-facebook" style="color: white"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-twitter" style="color:white;"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-instagram" style="color: white;"></i>
+                                </a>  
+                            </div>
+                        </div>
+                        <p style="text-align: center; padding: 20px 20px 0 20px; font-weight: bold; font-size: 16px;">JIMMY SMITH</p>
+                        <p style="text-align: center; font-size: 15px; color: gray; font-weight: bold;">Marketing Manager</p>
+                    </div>
+                    <div class="cinq">
+                        <!-- <img src="t5.jpg" alt="" style="border-radius: 50%; width: 180px; margin-left: 25px;"> -->
+                        <div class="img5 yy">
+                            <div class="inside">
+                                <a href="">
+                                    <i class="fab fa-3x fa-facebook" style="color: white"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-twitter" style="color:white;"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-instagram" style="color: white;"></i>
+                                </a>  
+                            </div>
+                        </div>
+                        <p style="text-align: center; padding: 20px 20px 0 20px; font-weight: bold; font-size: 16px;">ALIZA</p>
+                        <p style="text-align: center; font-size: 15px; color: gray; font-weight: bold;">Seo Monster</p>
+                    </div>
+                    <div class="sixx">
+                        <!-- <img src="t6.jpg" alt="" style="border-radius: 50%; width: 180px; margin-left: 25px;"> -->
+                        <div class="img6 yy">
+                            <div class="inside">
+                                <a href="">
+                                    <i class="fab fa-3x fa-facebook" style="color: white"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-twitter" style="color:white;"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-3x fa-instagram" style="color: white;"></i>
+                                </a>  
+                            </div>
+                        </div>
+                        <p style="text-align: center; padding: 20px 20px 0 20px; font-weight: bold; font-size: 16px;">CELIEN JOHN</p>
+                        <p style="text-align: center; font-size: 15px; color: gray; font-weight: bold;">Senior Designer</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="seven" style="margin-top: 80px;">
+            <div class="ia">
+                <div class="ib" style="display: flex; justify-content: center;">
+                    <p style="margin: 100px 100px 30px 100px; font-size: 50px; font-weight: bold; color:white;">Newsletter Signup</p>
+                </div>
+                <div class="ic" style="display: flex; justify-content: center;">
+                    <input type="Email" name="Email" placeholder="abc@example.com" class="btn4" style="padding: 20px; font-size: 15px; width: 30%; border: 0px; border-radius: 10px 0 0 10px;">
+                    <input type="submit" value="SIGN UP" class="btn3" style="padding: 20px; font-size: 15px; width: 10%; border-radius: 0 10px 10px 0; border: 0px; " >
+                </div>
+            </div>
+        </div>
+        <div class="eight" id="blog">
+            <p style="margin-top: 60px; font-weight: bold; display: flex; justify-content: center; font-size: 50px; color: black; margin-bottom: 40px;">Blog</p>
+            <div class="ja" style="display: flex; justify-content: center;">
+                <div class="jb">
+                    <img src="bl1.jpg" alt="" style="width: 200px; height: 110px; margin-left: 15px;">
+                    <p style="font-weight: bold; text-align: center; font-size: 15px; margin-top: 30px;">LOREM IPSUM DOLOR SIT AMET</p>
+                    <p style="text-align: center; font-size: 14px; color: gray;">17 Aug, 2021</p>
+                    <p style="text-align: center; padding: 20px; font-size: 13px;" > 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.
+                    <input type="submit" value="READ MORE" class="btn5" style="padding: 12px; font-size: 12px; font-weight: bold; margin-top: 15px; border: 0px; border-radius: 5px; width: 115px;">
+                </div>
+                <div class="jc">
+                    <img src="bl2.jpg" alt="" style="width: 200px; height: 110px; margin-left: 15px;">
+                    <p style="font-weight: bold; text-align: center; font-size: 15px; margin-top: 30px;">LOREM IPSUM DOLOR SIT AMET</p>
+                    <p style="text-align: center; font-size: 14px; color: gray;">17 Aug, 2021</p>
+                    <p style="text-align: center; padding: 20px; font-size: 13px;" > 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.
+                    <input type="submit" value="READ MORE" class="btn5" style="padding: 12px; font-size: 12px; font-weight: bold; margin-top: 15px; border: 0px; border-radius: 5px; width: 115px;">
+                </div>
+                <div class="jd">
+                    <img src="bl3.jpg" alt="" style="width: 200px; height: 110px; margin-left: 15px;">
+                    <p style="font-weight: bold; text-align: center; font-size: 15px; margin-top: 30px;">LOREM IPSUM DOLOR SIT AMET</p>
+                    <p style="text-align: center; font-size: 14px; color: gray;">17 Aug, 2021</p>
+                    <p style="text-align: center; padding: 20px; font-size: 13px;" > 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio vel felis placerat pharetra ut vitae felis.
+                    <input type="submit" value="READ MORE" class="btn5" style="padding: 12px; font-size: 12px; font-weight: bold; margin-top: 15px; border: 0px; border-radius: 5px; width: 115px;">
+
+                </div>
+            </div>
+        </div>
+        <div class="nine" id="contact">
+            <div class="ka" style="display: flex; margin-top: 80px;">
+                <div class="kb">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d44858.8414506073!2d75.80310046142277!3d26.91236667568889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1629211867669!5m2!1sen!2sin" width="750px" height="680" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="kc" style="background-color: #ffe26d; width: 770px; height: 680px;">
+                    <div class="kd" style="height: 600px; width: 50%; margin: 50px;">
+                        <p style="font-weight: bold; font-size: 40px;">Contact</p>
+                        <form action="" style="font-size: 12px;">
+                            <label for="NAME">NAME <br> <br>
+                                <input type="text" placeholder="Your Name"> 
+                            </label> 
+                            <label for="EMAIL ADDRESS"> EMAIL ADDRESS <br> <br>
+                                <input type="email" placeholder="Your Email">
+                            </label>
+                            <label for="SUBJECT"> SUBJECT <br> <br>
+                                <input type="text" placeholder="Your Subject">
+                            </label>
+                            <label for="MESSAGE"> MESSAGE <br> <br>
+                                <textarea id="text" name="text" rows="9" cols="51" placeholder="Your Message"></textarea>
+                            </label>
+                            <label for="SEND">
+                                <input type="submit" value="SEND" style="color: white;" id="send">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="ten" style="display: flex; justify-content: center;">
+            <div class="la" style="display: flex; width: 45%;">
+                <div class="lb">
+                    <p style="font-size: 12px; font-weight: bold; text-align: center; margin-top: 50px;">OFFICE ADDRESS</p>
+                    <p style="font-size: 13px; text-align: center; padding:20px;">Lorem Ipsum dolor,
+                        234 1200 Consecture
+                        Adipsching</p>
+                </div>
+                <div class="lc">
+                    <p style="font-size: 12px; font-weight: bold; text-align: center; margin-top: 50px;">FOLLOW US</p>
+                    <ul style="list-style-type:none;" class="list1">
+                        <li>
+                            <i class="fab fa-facebook"></i>
+                        </li>
+                        <li>
+                            <i class="fab fa-twitter"></i>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram"></i>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="ld">
+                    <p style="font-size: 12px; font-weight: bold; text-align: center; margin-top: 50px;">CONTACT US</p>
+                    <p style="font-size: 13px; text-align: center; padding:20px;">
+                        8-999-999-99-99
+                        Zippy Skype <br>
+                        dolzhik@yandex.ru
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
